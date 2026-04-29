@@ -11,7 +11,14 @@ function RequirementsChecklist({ password }) {
       <h4>Requisitos:</h4>
       <ul>
         {rules.map((rule, index) => (
-          <li key={index} style={{ color: rule.valid ? "green" : "red" }}>
+          <li
+            key={index}
+            style={{
+              color: rule.valid ? "green" : "red",
+              textDecoration: rule.valid ? "line-through" : "none",
+              fontWeight: "bold",
+            }}
+          >
             {rule.label}
           </li>
         ))}
