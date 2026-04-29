@@ -14,7 +14,13 @@ function getStrength(password) {
 function StrengthIndicator({ password }) {
   const strength = getStrength(password);
 
-  return <h3>Fortaleza: {strength}</h3>;
+  return (
+    <h3>
+      {password === ""
+        ? "Ingrese una contraseña"
+        : `Fortaleza: ${strength}`}
+    </h3>
+  );
 }
 
 export default StrengthIndicator;

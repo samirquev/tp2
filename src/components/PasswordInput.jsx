@@ -24,13 +24,15 @@ function PasswordInput({ password, setPassword }) {
         placeholder="Ingrese contraseña"
       />
 
-      <button onClick={() => setShow(!show)}>
+      <div className="botones">
+        <button onClick={() => setShow(!show)}>
         {show ? "Ocultar" : "Mostrar"}
-      </button>
+        </button>
 
-      <button onClick={handleCopy}>
+        <button onClick={handleCopy}>
         Copiar
-      </button>
+        </button>
+      </div>
 
       {copied && <p style={{ color: "green" }}>¡Copiado!</p>}
     </div>
